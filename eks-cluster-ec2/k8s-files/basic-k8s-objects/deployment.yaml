@@ -15,7 +15,7 @@ spec:
       app: myapp
       run: nginx
       type: frontend
-  replicas: 10
+  replicas: 4
   strategy:
     rollingUpdate:
       maxSurge: 5 #25%
@@ -35,12 +35,13 @@ spec:
       containers:
       - name:  myapp
         image: nginx:perl
+  
         resources:
           requests:
-            cpu: 100m
+            cpu: 500m
             memory: 100Mi
           limits:
-            cpu: 100m
+            cpu: 1000m
             memory: 100Mi
         
 
