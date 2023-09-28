@@ -10,6 +10,8 @@ alias k=kubectl
 alias kgp="kubectl get po" 
 alias kgn="kubectl get nodes"
 
+kubectl create ns tower
+
 kubectl api-resources  # To get all api resources i.e their NAME, SHORTNAMES, APIVERSION, NAMESPACED, KIND
 
 Kubectl run -h # to get list of subcommands
@@ -23,7 +25,7 @@ kubectl get all # To list all objects within the default namespace else add name
 K8s PODS
 ##############################################
 
-kubectl run <pod-name> --image <image-name>
+kubectl run <pod-name> --image <image-name> -n <name of namespace>
 
 kubectl get pods # To get pods in default namespace
 

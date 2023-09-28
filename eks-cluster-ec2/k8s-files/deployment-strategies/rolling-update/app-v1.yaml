@@ -8,6 +8,11 @@ metadata:
     app: my-app
 spec:
   replicas: 5
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 3
+      maxUnavailable: 2
   selector:
     matchLabels:
       app: my-app
@@ -32,10 +37,13 @@ spec:
           httpGet:
             path: /live
             port: probe
-          initialDelaySeconds: 5
+          initialDelaySeconds: 15
           periodSeconds: 5
         readinessProbe:
           httpGet:
             path: /ready
             port: probe
           periodSeconds: 5
+           # Intial delay is set to a high value to have a better
+          # visibility of the ramped deployment
+          initialDelaySeconds: 15

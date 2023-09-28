@@ -5,7 +5,7 @@
 #   labels:
 #     app: my-app
 # spec:
-#   replicas: 5
+#   replicas: 2
 #   selector:
 #     matchLabels:
 #       app: my-app
@@ -27,26 +27,3 @@
 #             configMapKeyRef:
 #               name: jjtech-cm
 #               key: app-version
-
-# --- 
-
-# apiVersion: v1
-# kind: Pod
-# metadata:
-#   name: "myapp"
-#   namespace: default
-#   labels:
-#     app: "myapp"
-# spec:
-#   containers:
-#   - name: myapp
-#     image: nginx  # "debian-slim:latest"
-#     ports:
-#     - containerPort:  80
-#       name:  http
-#     env:
-#     - name: VERSION
-#       valueFrom:
-#         configMapKeyRef:
-#           name: jjtech-cm
-#           key: app-version
