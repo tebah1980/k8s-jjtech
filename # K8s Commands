@@ -4,6 +4,10 @@
 General commands
 ##########################
 
+k get po -n application --show-labels # show lables for pods
+
+k get po -o wide # to get list of nodes on which pods are deployed
+
 aws eks update-kubeconfig --name jjtech-demo-cluster --region us-east-1
 
 alias k=kubectl
