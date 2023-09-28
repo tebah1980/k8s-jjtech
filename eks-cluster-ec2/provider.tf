@@ -11,9 +11,10 @@ terraform {
 
 provider "aws" {
   region = var.region
+  
   default_tags {
     tags = {
-      Name    = "k8s_immersion_batch"
+      Name    = "k8s_tower_batch"
       project = "eks_demo"
     }
   }
