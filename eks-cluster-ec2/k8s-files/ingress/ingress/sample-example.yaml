@@ -75,24 +75,23 @@ metadata:
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
-    kubernetes.io/ingress.class: alb
-    # alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}, {"HTTP":80}]'
 spec:
+  ingressClassName: alb
   rules:
     - http:
         paths:
-        - path: /hello-v1
-          pathType: Prefix
-          backend:
-            service:
-              name: hello-v1-svc
-              port:
-                number: 8080
-        - path: /hello-v2
-          pathType: Prefix
-          backend:
-            service:
-              name: hello-v2-svc
-              port:
-                number: 8080
+          - path: /hello-v1
+            pathType: Prefix
+            backend:
+              service:
+                name: hello-v1-svc
+                port:
+                  number: 8080
+          - path: /hello-v2
+            pathType: Prefix
+            backend:
+              service:
+                name: hello-v2-svc
+                port:
+                  number: 8080
       

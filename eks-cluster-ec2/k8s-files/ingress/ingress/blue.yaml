@@ -6,7 +6,7 @@ metadata:
     app: blue-app
 spec:
   ports:
-  - port: 8000
+  - port: 8080
     targetPort: 8080
     protocol: TCP
   # Note here that we match both the app and the version

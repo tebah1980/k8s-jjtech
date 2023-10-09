@@ -6,22 +6,21 @@ metadata:
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
-    kubernetes.io/ingress.class: alb
-    # alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}, {"HTTP":80}]'
   labels:
     run: app
 spec:
+  ingressClassName: alb
   rules:
  # - host: example.com
    - http:
         paths:
-        - path: /
-          pathType: Prefix
-          backend:
-            service:
-              name: blue-service
-              port:
-                number: 8000
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: blue-service
+                port:
+                  number: 8080
      
       
           
