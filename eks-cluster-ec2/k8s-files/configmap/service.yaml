@@ -5,11 +5,11 @@ metadata:
   labels:
     app: my-app
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - name: http
     port: 80
     targetPort: http
   selector:
-    app: my-app
+    app: myapp
     

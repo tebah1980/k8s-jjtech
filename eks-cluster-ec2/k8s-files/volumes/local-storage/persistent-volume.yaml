@@ -5,6 +5,7 @@ kind: PersistentVolume
 metadata:
   name: my-local-pv
 spec:
+  persistentVolumeReclaimPolicy: Delete #Retain
   capacity:
     storage: 3Gi
   volumeMode: Filesystem
@@ -20,5 +21,4 @@ spec:
             - key: kubernetes.io/hostname
               operator: In
               values:
-                - ip-10-20-107-160.ec2.internal
-                - ip-10-20-64-112.ec2.internal
+                - ip-10-20-109-206.ec2.internal

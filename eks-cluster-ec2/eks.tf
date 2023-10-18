@@ -59,6 +59,11 @@ resource "aws_iam_role_policy_attachment" "amazon-eks-cluster-policy" {
   role       = aws_iam_role.eks-cluster.name
 }
 
+resource "aws_iam_role_policy_attachment" "AmazonElasticFileSystemReadOnlyAccess" {
+  policy_arn = "arn:aws:iam::aws:policy/AmazonElasticFileSystemReadOnlyAccess"
+  role       = aws_iam_role.eks-cluster.name
+}
+
 
 # specify two private and two public subnets. AWS Fargate can only use private subnets with NAT gateway to deploy your pods. 
 # Public subnets can be used for load balancers to expose your application to the internet.

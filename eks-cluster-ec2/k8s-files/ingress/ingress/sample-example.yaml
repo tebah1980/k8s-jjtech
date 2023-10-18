@@ -78,7 +78,7 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - http:
+   # - host: tower.cadana.link
         paths:
           - path: /hello-v1
             pathType: Prefix

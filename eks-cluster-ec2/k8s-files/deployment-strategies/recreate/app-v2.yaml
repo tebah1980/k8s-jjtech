@@ -8,7 +8,6 @@ spec:
   replicas: 3
   strategy:
     type: Recreate
-
   # The selector field tell the deployment which pod to update with
   # the new version. This field is optional, but if you have labels
   # uniquely defined for the pod, in this case the "version" label,
