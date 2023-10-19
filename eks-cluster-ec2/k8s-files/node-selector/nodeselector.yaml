@@ -18,6 +18,6 @@ spec:
           ports:
             - containerPort: 8080
       nodeSelector: 
-        node: host1 # key-value used to label nodes
+        node: host # key-value used to label nodes
 
 # # kubectl label nodes node_name key=value

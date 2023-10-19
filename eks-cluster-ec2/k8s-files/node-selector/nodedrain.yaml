@@ -12,7 +12,6 @@ spec:
       labels:
         app: my-app
     spec:
-      nodeName: ip-10-20-64-184.ec2.internal
       containers:
         - name: nginx
           image: nginx

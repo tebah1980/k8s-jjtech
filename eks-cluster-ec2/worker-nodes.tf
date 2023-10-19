@@ -30,6 +30,11 @@ resource "aws_iam_role_policy_attachment" "AmazonEC2ContainerRegistryReadOnly" {
   role       = aws_iam_role.eks_node_group_role.name
 }
 
+resource "aws_iam_role_policy_attachment" "AmazonElasticFileSystemReadOnlyAccessn" {
+  policy_arn = "arn:aws:iam::aws:policy/AmazonElasticFileSystemReadOnlyAccess"
+  role       = aws_iam_role.eks_node_group_role.name
+}
+
 
 
 

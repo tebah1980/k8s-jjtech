@@ -16,7 +16,7 @@ Clone the EFS CSI Driver repository from GitHub:
 
 > git clone https://github.com/kubernetes-sigs/aws-efs-csi-driver.git.
 
-- Navigate to the kubernetes directory by running the follwoing command:
+- Navigate to the kubernetes directory by running the following command:
 
 > cd aws-efs-csi-driver/deploy/kubernetes
 
@@ -24,7 +24,7 @@ Clone the EFS CSI Driver repository from GitHub:
 > kubectl apply -k base
 
 This will create the required RBAC roles, ServiceAccount, and the EFS CSI driver deployment in your cluster.
-Create a StorageClass, PersistentVolume, and PersistentVolumeClaim (as mentioned in the previous response) to define the EFS storage resources for your applications.
+Create a StorageClass, PersistentVolume, and PersistentVolumeClaim to define the EFS storage resources for your applications.
 
 ### Deploy your application:
 

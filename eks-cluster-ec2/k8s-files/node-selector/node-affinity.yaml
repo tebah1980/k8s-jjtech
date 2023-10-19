@@ -11,6 +11,8 @@
 
 # Run the command "kubectl label nodes node_name key=value" to label a node prior to running hte pod
 
+# follow this link for more details: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/
+
 apiVersion: v1
 kind: Pod
 metadata:
@@ -24,7 +26,7 @@ spec:
               - key: node #<label-key>
                 operator: In
                 values:
-                  - host1  #<label-value>
+                  - host  #<label-value>
   containers:
     - name: nginx
       image: nginx
