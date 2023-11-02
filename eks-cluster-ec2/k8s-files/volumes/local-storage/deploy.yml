@@ -13,7 +13,7 @@ spec:
       labels:
         app: my-app
     spec:
-      #nodeName: ip-10-20-109-206.ec2.internal
+      nodeName: ip-10-20-107-121.ec2.internal
       containers:
         - name: nginx
           image: nginx

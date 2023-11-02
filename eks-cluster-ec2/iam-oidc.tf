@@ -13,3 +13,14 @@ resource "aws_iam_openid_connect_provider" "eks" {
   url             = aws_eks_cluster.cluster.identity[0].oidc[0].issuer
 }
 
+
+output "oidc_issuer" {
+  value = aws_iam_openid_connect_provider.eks.url
+  
+}
+
+output "oidc_arn" {
+  value = aws_iam_openid_connect_provider.eks.arn
+  
+}
+
