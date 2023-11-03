@@ -11,7 +11,6 @@ terraform {
 
 provider "aws" {
   region = var.region
-  
   default_tags {
     tags = {
       Name    = "k8s_tower_batch"
