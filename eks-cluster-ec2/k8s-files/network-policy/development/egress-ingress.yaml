@@ -36,7 +36,6 @@ spec:
       pod: db-pod
   policyTypes:
     - Ingress
-    - Egress
   ingress:
     - from:
       - podSelector:
